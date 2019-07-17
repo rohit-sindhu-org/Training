@@ -4,5 +4,7 @@ trigger AccountTriggerHandler on Account (before insert) {
             system.debug('Rohit Sindhu:'+ Datetime.now());
             system.debug('Rohit Sindhu:Push Code Changes '+ Datetime.now());
         }
+
+        
     }
 }
