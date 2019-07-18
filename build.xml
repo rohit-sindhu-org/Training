@@ -1,5 +1,5 @@
 <project name="Salesforce CRM" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
-    <taskdef uri="antlib:com.salesforce" resource="com/salesforce/antlib.xml" classpath="lib/ant.jar" />
+    <taskdef uri="antlib:com.salesforce" resource="com/salesforce/antlib.xml" classpath="${basedir}/lib/ant-salesforce.jar" />
     
     <property environment="env" />
     <property name="sf.username" value="${env.SFUSER}" />
