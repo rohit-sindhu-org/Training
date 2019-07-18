@@ -1,5 +1,5 @@
-trigger AccountTriggerHandler on Account (before insert) {
-      if(Trigger.isAfter && Trigger.isUpdate){
+trigger AccountTriggerHandler on Account (after insert) {
+      if(Trigger.isAfter && Trigger.isInsert){
         for (Account ord : Trigger.new) {
             system.debug('Rohit Sindhu:'+ Datetime.now());
       }
