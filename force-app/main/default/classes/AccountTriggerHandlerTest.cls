@@ -6,8 +6,9 @@ public class AccountTriggerHandlerTest {
     
         test.startTest();
         insert pAcc;
-        test.stopTest();
+        
         Account acc=[Select Id from Account where Id=:pAcc.Id]; 
         System.assert(acc!=null,'Rohit Sindhu Error');
+        test.stopTest();
     }
 }
