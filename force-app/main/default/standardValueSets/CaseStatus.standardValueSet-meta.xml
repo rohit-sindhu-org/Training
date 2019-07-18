@@ -25,10 +25,4 @@
         <label>Closed</label>
         <closed>true</closed>
     </standardValue>
-    <standardValue>
-        <fullName>Test Amar</fullName>
-        <default>false</default>
-        <label>Test Amar</label>
-        <closed>false</closed>
-    </standardValue>
 </StandardValueSet>
