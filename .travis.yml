@@ -4,4 +4,4 @@ env:
    global:
       -SFUSER=rohit.sindhu90@gmail.com.training
       -SFPASS=Sindhu@1990
-      - SFURL=https://login.salesforce.com
+      -SFURL=https://login.salesforce.com
