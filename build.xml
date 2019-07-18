@@ -12,6 +12,6 @@
     <property name="log.type" value="None" />
     
     <target name="test">
-        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="deploy" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true" />
+        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="deploy" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true"/>
     </target>
 </project>
