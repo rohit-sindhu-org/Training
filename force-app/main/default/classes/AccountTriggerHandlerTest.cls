@@ -8,6 +8,6 @@ public class AccountTriggerHandlerTest {
         insert pAcc;
         test.stopTest();
         Account acc=[Select Id from Account where Id=:pAcc.Id]; 
-        System.assert(acc==null,'error');
+        System.assert(acc!=null,'Rohit Sindhu Error');
     }
 }
