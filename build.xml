@@ -22,8 +22,11 @@
 
     <target name="test">
         <!-- Retrieve the contents listed in the file codepkg/package.xml into the codepkg directory -->
-        <!--<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="deploy" unpackaged="manifest/package.xml" />-->
-        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="force-app/main/default" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true" />
+        
+        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="force-app/main/default" packaged="manifest/package.xml" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true" />
     </target>
     
+    <target name="retriveCode">
+        <sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="force-app/main/default" unpackaged="manifest/package.xml" />
+    </target>
 </project>
