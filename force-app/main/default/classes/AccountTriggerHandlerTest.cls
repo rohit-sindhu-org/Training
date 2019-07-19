@@ -1,7 +1,8 @@
 @isTest
 public class AccountTriggerHandlerTest {
     static testmethod void testNewAccount() {
-  //insert parent account
+        //insert parent account
+        System.debug(logLevel, 'Rohit Sindhu:Test Started');
         Account pAcc = new Account();pAcc.Name = 'Parent';
     
         test.startTest();
