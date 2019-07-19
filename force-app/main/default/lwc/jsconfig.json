@@ -2,11 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {
-            "c/helloWorld": [
-                "helloWorld/helloWorld.js"
-            ]
-        }
+        "paths": {}
     },
     "include": [
         "**/*",
