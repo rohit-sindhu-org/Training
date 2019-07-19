@@ -2,19 +2,28 @@
     <taskdef uri="antlib:com.salesforce" resource="com/salesforce/antlib.xml" classpath="${basedir}/lib/ant-salesforce.jar" />
     
     <property environment="env" />
-    <property name="sf.username" value="${env.SFUSER}" />
+    <!--<property name="sf.username" value="${env.SFUSER}" />
     <property name="sf.password" value="${env.SFPASS}" />
     <property name="sf.serverurl" value="${env.SFURL}" />
     <property name="sf.maxPoll" value="500" />
     <property name="sf.maxWaitMillis" value="3000" />
     <property name="test.level" value="NoTestRun" />
     <property name="check.only" value="true" />
-    <property name="log.type" value="None" />
-    
+    <property name="log.type" value="None" />-->
+    <property name="sf.username" value="rohit.sindhu90@gmail.com.training" />
+    <property name="sf.password" value="Sindhu@1990RVwNIxBWwP5kc7sDeNA3ZpWLb" />
+    <property name="sf.serverurl" value="https://login.salesforce.com" />
+    <property name="sf.maxPoll" value="500" />
+    <property name="sf.maxWaitMillis" value="3000" />
+    <property name="test.level" value="RunLocalTests" />
+    <property name="check.only" value="true" />
+    <property name="log.type" value="Debugonly" />
+
+
     <target name="test">
         <!-- Retrieve the contents listed in the file codepkg/package.xml into the codepkg directory -->
-        <sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="deploy" unpackaged="deploy/package.xml" />
-        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="deploy" singlePackage="false" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true"/>
+        <!--<sf:retrieve username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" retrieveTarget="deploy" unpackaged="manifest/package.xml" />-->
+        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="force-app" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true" />
     </target>
     
 </project>
