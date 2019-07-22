@@ -3,6 +3,7 @@ trigger AccountTriggerHandler on Account (before insert) {
         for (Account ord : Trigger.new) {
             system.debug('Rohit Sindhu:'+ Datetime.now());
             system.debug('Rohit Sindhu:Deploy Build'+ Datetime.now());
+            system.debug('Rohit Sindhu:Deploy Build Successful scratch Org');
         }
     }
 }
