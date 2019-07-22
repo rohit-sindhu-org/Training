@@ -4,9 +4,13 @@
 
 package.xml
 
+forceapp/main/default/package.xml
+forceapp/main/default/package.xml-meta.xml
+
 # LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json
 
 # LWC Jest
 **/__tests__/**
+

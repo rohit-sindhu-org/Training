@@ -22,8 +22,15 @@
 
     <target name="test">
         <!-- Retrieve the contents listed in the file codepkg/package.xml into the codepkg directory -->
-        
-        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="force-app/main/default" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" logType="${log.type}" ignoreWarnings="true" />
+        <delete>
+            <fileset dir=".\deploy\" includes="**/*.*" />
+        </delete>
+        <copy file="manifest\package.xml" tofile="deploy\package.xml" />
+        <copy todir=".\deploy\">
+            <fileset dir=".\force-app\main\default" includes="**/*.*" />
+           
+        </copy>
+        <sf:deploy username="${sf.username}" password="${sf.password}" serverurl="${sf.serverurl}" deployRoot="deploy" singlePackage="true" maxPoll="${sf.maxPoll}" pollWaitMillis="${sf.maxWaitMillis}" testLevel="${test.level}" checkOnly="${check.only}" autoUpdatePackage="true" logType="${log.type}" ignoreWarnings="true" />
     </target>
 
     <target name="retriveCode">
